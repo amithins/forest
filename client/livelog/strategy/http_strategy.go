@@ -7,5 +7,5 @@ type Http interface {
 	NodesEndpoint() string
 	// Performs a GET request to the remote service, using the passed endpoint.
 	// if nodeId is not empty, it is appended as the X-JFrog-Node-Id header value.
-	SendGet(ctx context.Context, endpoint, nodeId string) ([]byte, error)
+	SendGet(ctx context.Context, endpoint) ([]byte, error)
 }
